@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+* {
+  box-sizing: border-box; /* Mengatur box model untuk setiap elemen, sehingga padding dan border dihitung dalam lebar dan tinggi total elemen.*/
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;  /*  Menetapkan margin menjadi 0% untuk semua elemen.*/
+}
+
+header {
+  padding: 1rem; /* Menetapkan padding menjadi 0% untuk semua elemen.*/
+  display: flex; /* Mengatur elemen body menggunakan model flexbox.*/
+  justify-content: space-between; /* Mengatur semua item di dalam body agar berada di tengah secara vertikal.*/
+  align-items: center;  /*  Mengatur semua item di dalam body agar berada di tengah secara horizontal*/
+  background-color: var(--secondary-color);
+}
+
+header h1 {
+  color: #eee; /* Menetapkan warna teks menjadi putih.*/
+  padding: 0; /* Menetapkan padding menjadi 0% untuk semua elemen.*/
+  margin: 0; /*  Menetapkan margin menjadi 0% untuk semua elemen.*/
+  font-size: 1.5rem;
+}
+
+header h2 {
+    color: #eee; /* Menetapkan warna teks menjadi putih.*/
+    padding: 0; /* Menetapkan padding menjadi 0% untuk semua elemen.*/
+    margin: 0; /*  Menetapkan margin menjadi 0% untuk semua elemen.*/
+    font-size: 1.5rem;
+  }
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #7378c5;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.footer p {
+  color: #eee;
+  text-align: center;
+}
+
+@media (max-width: 580px) {
+  header {
+    flex-direction: column;
+  }
+
+  header h1 {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Gaya untuk form login */
+.login-form {
+    background-color: #f0f0f0; /* Mengatur warna latar belakang */
+    padding: 20px; /* Memberikan ruang padding di sekitar form */
+    border-radius: 10px; /* Memberikan sudut bulat pada form */
+    display: center;
+}
+
+/* Gaya untuk teks "Login" */
+.login-form h2 {
+    color: #333; /* Mengatur warna teks */
+}
+
+/* Gaya untuk label dan input */
+.login-form label,
+.login-form input {
+    display: block; /* Membuat label dan input tampil dalam blok terpisah */
+    margin-bottom: 10px; /* Memberikan jarak antara label/input */
+}
+
+/* Gaya untuk tombol login */
+.login-form button {
+    background-color: #4CAF50; /* Mengatur warna latar belakang */
+    color: black; /* Mengatur warna teks */
+    padding: 10px 20px; /* Memberikan ruang padding di dalam tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Memberikan sudut bulat pada tombol */
+    cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */
+}
+
+/* Gaya untuk tombol login saat dihover */
+.login-form button:hover {
+    background-color: #45a049; /* Mengubah warna latar belakang saat dihover */
+}
+
+#waktu {
+    color: white /* Atur warna teks menjadi merah */
+}
