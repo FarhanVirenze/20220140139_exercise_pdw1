@@ -1,180 +1,140 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
-
-:root {
-  --primary-color: #22254b;
-  --secondary-color: #373b69;
+body { /* styles.css */
+  font-family: Arial, sans-serif; /* Mengatur font family untuk seluruh dokumen */
+  margin: 0; /* Menghapus margin default */
+  padding: 0; /* Menghapus padding default */
 }
 
-* {
-  box-sizing: border-box; /* Mengatur box model untuk setiap elemen, sehingga padding dan border dihitung dalam lebar dan tinggi total elemen.*/
+header { /* Penyusunan tampilan untuk bagian header */
+  background-color: #FFC107; /* Mengatur warna latar belakang */
+  color: #FFFFFF; /* Mengatur warna teks */
+  text-align: center; /* Penyusunan teks ke tengah */
+  padding: 20px; /* Penambahan padding */
 }
 
-body {
-  background-color: var(--primary-color);
-  font-family: "Poppins", sans-serif;
-  margin: 0;  /*  Menetapkan margin menjadi 0% untuk semua elemen.*/
+main { /* Penyusunan tampilan untuk bagian utama */
+  padding: 20px; /* Penambahan padding */
 }
 
-header {
-  padding: 1rem; /* Menetapkan padding menjadi 0% untuk semua elemen.*/
-  display: flex; /* Mengatur elemen body menggunakan model flexbox.*/
-  justify-content: space-between; /* Mengatur semua item di dalam body agar berada di tengah secara vertikal.*/
-  align-items: center;  /*  Mengatur semua item di dalam body agar berada di tengah secara horizontal*/
-  background-color: var(--secondary-color);
+section { /* Penyusunan tampilan untuk setiap bagian (section) */
+  margin-bottom: 40px; /* Penambahan margin di bagian bawah */
 }
 
-header h1 {
-  color: #eee; /* Menetapkan warna teks menjadi putih.*/
-  padding: 0; /* Menetapkan padding menjadi 0% untuk semua elemen.*/
-  margin: 0; /*  Menetapkan margin menjadi 0% untuk semua elemen.*/
-  font-size: 1.5rem;
+nav ul { /* Penyusunan tampilan untuk menu navigasi */
+  list-style-type: none; /* Menghapus gaya daftar default */
+  padding: 0; /* Menghapus padding default */
+  margin: 0;  /* Menghapus margin default */
+  background-color: #333; /* Mengatur warna latar belakang */
+  text-align: center; /* Penyusunan teks ke tengah */
 }
 
-header h2 {
-    color: #eee; /* Menetapkan warna teks menjadi putih.*/
-    padding: 0; /* Menetapkan padding menjadi 0% untuk semua elemen.*/
-    margin: 0; /*  Menetapkan margin menjadi 0% untuk semua elemen.*/
-    font-size: 1.5rem;
-  }
-
-.search {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  border-radius: 50px;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color: #fff;
+nav li {
+  display: inline; /* Menampilkan item daftar secara horizontal */
 }
 
-.search::placeholder {
-  color: #7378c5;
+nav a {
+  display: inline-block;  /* Menetapkan elemen anchor menjadi blok */
+  padding: 14px 16px; /* Penambahan padding */
+  color: white; /* Mengatur warna teks */
+  text-decoration: none;  /* Menghapus garis bawah default */
 }
 
-.search:focus {
-  outline: none;
-  background-color: var(--primary-color);
+nav a:hover {
+  background-color: #555; /* Mengubah warna latar belakang saat dihover */
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+img { /* Penyusunan tampilan untuk gambar */
+  width: 200px; /* Atur lebar gambar sesuai kebutuhan */
+  transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
 }
 
-.movie {
-  width: 300px;
-  margin: 1rem;
-  background-color: var(--secondary-color);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  border-radius: 3px;
+img:hover {
+  transform: scale(1.1); /* Perbesar gambar ketika dihover */
 }
 
-.movie img {
-  width: 100%;
+.book { /* Penyusunan tampilan untuk kontainer buku */
+  border: 1px solid #CCC; /* Penambahan border */
+  border-radius: 5px; /* Penambahan radius sudut */
+  padding: 20px; /* Penambahan padding */
+  margin-bottom: 20px; /* Penambahan margin di bagian bawah */
 }
 
-.movie-info {
-  color: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem 1rem;
-  letter-spacing: 0.5px;
+#main-content { 
+  /* Penyusunan tampilan untuk konten utama */
+  padding: 20px;  /* Penambahan padding */
 }
 
-.movie-info h3 {
-  margin-top: 0;
+#pagination { /* Penyusunan tampilan untuk pagination */
+  text-align: center; /* Mengatur konten ke tengah */
 }
 
-.movie-info span {
-  background-color: var(--primary-color);
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  font-weight: bold;
+#pagination button {
+  padding: 8px 16px; /* Penambahan padding */
+  background-color: #555655;  /* Mengatur warna latar belakang */
+  color: white; /* Mengatur warna teks */
+  border: none; /* Menghapus border */
+  cursor: pointer;  /* Mengubah kursor saat dihover */
+  transition: background-color 0.3s;
+  /* Untuk memastikan tombol berada di baris yang sama */
+  display: inline-block; /* Memastikan tombol ditampilkan secara inline */
 }
 
-.movie-info span.green {
-  color: lightgreen;
+#pagination button:hover {
+  background-color: #0b100b; /* Mengubah warna latar belakang saat dihover */
 }
 
-.movie-info span.orange {
-  color: orange;
+.book img { /* Penyusunan tampilan untuk gambar di dalam kontainer buku */
+  max-width: 100%; /* Menetapkan lebar maksimum untuk gambar */
+  height: 300px; /* Menetapkan tinggi untuk gambar */
+  border-radius: 5px; /* Penambahan radius sudut */
 }
 
-.movie-info span.red {
-  color: red;
+button { /* Penyusunan tampilan untuk tombol */
+  background-color: #FF5733; /* Mengatur warna latar belakang */
+  color: #FFFFFF; /* Mengatur warna teks */
+  border: none; /* Menghapus border */
+  padding: 10px 20px;  /* Penambahan padding */
+  border-radius: 5px; /* Penambahan radius sudut */
+  cursor: pointer; /* Mengubah kursor saat dihover */
 }
 
-.overview {
-  background-color: #fff;
-  padding: 2rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  max-height: 100%;
-  transform: translateY(101%);
-  overflow-y: auto;
-  transition: transform 0.3s ease-in;
+button:hover {
+  background-color: #E5482B; /* Mengubah warna latar belakang saat dihover */
+
 }
 
-.movie:hover .overview {
-  transform: translateY(0);
-}
-
-.footer p {
-  color: #eee;
+footer { /* Penyusunan tampilan untuk bagian footer */
+  background-color: #F3F3F3; /* Mengatur warna latar belakang */
+  padding: 20px; /* Penambahan padding */
   text-align: center;
 }
 
-@media (max-width: 580px) {
-  header {
-    flex-direction: column;
-  }
-
-  header h1 {
-    padding: 0.5rem 1rem;
-  }
+.alert {
+  background-color: #FFC107;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-/* Gaya untuk form login */
-.login-form {
-    background-color: #f0f0f0; /* Mengatur warna latar belakang */
-    padding: 20px; /* Memberikan ruang padding di sekitar form */
-    border-radius: 10px; /* Memberikan sudut bulat pada form */
-    display: center;
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
 }
 
-/* Gaya untuk teks "Login" */
-.login-form h2 {
-    color: #333; /* Mengatur warna teks */
+footer h2 {
+  color: #fff;
 }
 
-/* Gaya untuk label dan input */
-.login-form label,
-.login-form input {
-    display: block; /* Membuat label dan input tampil dalam blok terpisah */
-    margin-bottom: 10px; /* Memberikan jarak antara label/input */
+footer .contact-info, footer .about-info {
+  margin-bottom: 20px;
 }
 
-/* Gaya untuk tombol login */
-.login-form button {
-    background-color: #4CAF50; /* Mengatur warna latar belakang */
-    color: black; /* Mengatur warna teks */
-    padding: 10px 20px; /* Memberikan ruang padding di dalam tombol */
-    border: none; /* Menghilangkan border */
-    border-radius: 5px; /* Memberikan sudut bulat pada tombol */
-    cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */
-}
-
-/* Gaya untuk tombol login saat dihover */
-.login-form button:hover {
-    background-color: #45a049; /* Mengubah warna latar belakang saat dihover */
+footer p {
+  margin: 5px 0;
 }
 
 #waktu {
-    color: white /* Atur warna teks menjadi merah */
+  text-align: center; /* Mengatur teks menjadi berada di tengah */
+  font-family: "Nama Font"; /* Mengganti font */
 }

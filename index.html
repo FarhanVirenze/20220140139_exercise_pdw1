@@ -1,45 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- index.html -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/styles.css" /> <!-- Menghubungkan halaman HTML dengan file CSS yang berisi aturan gaya untuk memformat tampilan halaman.-->
-    <title>Movie App</title> <!--Menetapkan judul halaman web yang akan ditampilkan di tab browser.-->
-
-    <div class="login-form">
-        <h2>Login</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </form>
-    </div>
-    
-    <button onclick="sweetalert()" type="submit">Login</button>
-    <p id="waktu"></p>
-    
-        <script>
-            function sweetalert() {
-                alert("Halooo")
-            }
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Movie App</h1>
-      <h2>Should I Watch it?</h2>
-      <form id="form">
-        <input type="text" placeholder="Search" id="search" class="search" />
-      </form>
+<head>
+    <meta charset="UTF-8">  <!-- Meta tag untuk mengatur encoding karakter dan viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookworm</title>
+    <link rel="stylesheet" href="./style/styles.css"> <!-- Menghubungkan stylesheet eksternal -->
+</head>
+<body>
+    <header> <!-- Bagian header -->
+        <h1>Online Bookstore</h1>
+        <nav> <!-- Navigasi -->
+          <ul>
+              <li><a href="#">Beranda</a></li>
+              <li><a href="#">Buku</a></li>
+              <li><a href="#">Tentang</a></li>
+              <li><a href="#">Kontak</a></li>
+          </ul>
+      </nav>      
     </header>
-    <main id="main"></main>
-    <footer class="footer">
-      <p>
-        This project uses the TMDb API but is not endorsed or certified by TMDb.
-      </p>
+    <main>     <!-- Bagian utama konten -->
+        <section>
+            <h2>Selamat datang di Toko Buku Online Kami</h2>   <!-- Deskripsi toko buku -->
+            <p>Temukan banyak koleksi buku mulai dari buku terlaris hingga permata tersembunyi. Baik Anda seorang kutu buku atau pembaca biasa, selalu ada sesuatu untuk semua orang di sini.</p>
+            <p>Mulailah perjalanan sastra Anda bersama kami hari ini!</p>
+        </section>
+        <section>   <!-- Seksi buku unggulan -->
+            <h2>Featured Books</h2>   <!-- Daftar buku -->
+            <div class="book">
+                <img src="./assets/image/fiction1.jpg" alt="Fiction Book">
+                <h3>The Great Gatsby</h3>
+                <p>Ikuti kehidupan mewah Jay Gatsby dalam film klasik abadi karya F. Scott Fitzgerald yang berlatar tahun dua puluhan.</p>
+                <button onclick="sweetalert()" type="submit">Add to Cart</button></button>  <!-- Tombol "Add to Cart" -->
+            </div>
+            <div class="book">
+                <img src="./assets/image/non-fiction1.jpg" alt="Non-Fiction Book">
+                <h3>Becoming</h3>
+                <p>bergabunglah dengan Michelle Obama dalam perjalanan inspiratifnya dari South Side of Chicago ke Gedung Putih dalam memoar intimnya.</p>
+                <button onclick="sweetalert()" type="submit">Add to Cart</button></button>  <!-- Tombol "Add to Cart" -->
+            </div>
+            <div class="book">
+              <img src="./assets/image/fiction2.jpg" alt="Fiction Book">
+              <h3>to kill a mockingbird</h3>
+              <p>menceritakan masa kecil Scout dan Jem Finch saat ayah mereka Atticus membela seorang pria kulit hitam yang dituduh melakukan pemerkosaan.
+              </p>
+              <button onclick="sweetalert()" type="submit">Add to Cart</button></button>  <!-- Tombol "Add to Cart" -->
+            </div>
+            <div class="book">
+              <img src="./assets/image/non-fiction2.jpg" alt="Non-Fiction Book">
+             <h3>Filosofi Teras</h3>
+             <p>menceritakan tentang Henry menghadapi masalah mental, termasuk negative thinking dan depresi, yang kemudian didiagnosis sebagai Major Depressive Disorder oleh seorang psikiater.</p>
+             <button onclick="sweetalert()" type="submit">Add to Cart</button></button>  <!-- Tombol "Add to Cart" -->
+            </div>
+            <div class="book">
+              <img src="./assets/image/fiction3.jpg" alt="Fiction Book">
+             <h3>Mrs Dalloway</h3>
+             <p>mengisahkan kehidupan Nyonya Dalloway, seorang wanita kelas atas di Inggris pasca Perang Dunia Pertama.</p>
+             <button onclick="sweetalert()" type="submit">Add to Cart</button></button>  <!-- Tombol "Add to Cart" -->
+            </div>
+            <div class="book">
+              <img src="./assets/image/non-fiction3.jpg" alt="Non-Fiction Book">
+             <h3>Sebuah seni untuk bersikap bodo amat</h3>
+             <p>menceritakan kisah nyata hidupnya saat ia memiliki banyak masalah yang membuatnya lebih kuat dan mencapai tujuannya. </p>
+             <button onclick="sweetalert()" type="submit">Add to Cart</button></button>  <!-- Tombol "Add to Cart" -->
+            </div>
+            <div id="main-content">
+              <div id="pagination">
+                  <button id="prevButton">Previous</button>
+                  <button class="pageButton">1</button>
+                  <button class="pageButton">2</button>
+                  <button class="pageButton">3</button>
+                  <button id="nextButton">Next</button>
+              </div>
+        </section>
+    </main>
+    <footer>    <!-- Bagian footer -->
+      <div class="contact-info">  <!-- Informasi kontak -->
+        <h2>Kontak</h2>
+        <p>Email: BookWormbest@gmail.com</p>
+        <p>Nomor Telepon: 333-456-6890</p>
+    </div>
+    <div class="about-info">  <!-- Informasi tentang -->
+        <h2>Tentang Kami</h2>
+        <p>Bookworm merupakan website online Booksstore yang menjual berbagai jenis buku seperti fiksi dan non-fiksi.</p>
+    </div>
+    <p>Tetap update dengan rilis dan promosi buku terbaru!</p>
+    <div class="alert">Berlangganan buletin kami untuk mendapatkan diskon eksklusif dan rekomendasi membaca.</div>  <!-- Informasi kontak -->
     </footer>
-    <script src="./script/main.js"></script>
-  </body>
+</body>
+<!-- JavaScript -->
+<script>
+  function sweetalert() {
+      alert("Halooo")
+  }
+</script>
+<p id="waktu"></p> <!-- Elemen untuk menampilkan waktu -->
+<script src="./script/main.js"></script> <!-- Menghubungkan script eksternal -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Menghubungkan SweetAlert 2 library -->
+
 </html>
